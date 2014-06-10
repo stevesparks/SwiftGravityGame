@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SwiftOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7u-na-LGR">
+                                <rect key="frame" x="280" y="439" width="180" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="cPI-tO-W5j"/>
+                                    <constraint firstAttribute="height" constant="20.5" id="dFc-Lw-LVE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1.3" translatesAutoresizingMaskIntoConstraints="NO" id="NSd-W7-1lf">
+                                <rect key="frame" x="278" y="401" width="184" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HTP-XD-5ex"/>
+                                    <constraint firstAttribute="width" constant="180" id="mEI-YZ-tm3"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="elasticitySliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cLZ-cl-nEZ"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADy-Bc-ZAB" customClass="AVTouchView">
+                                <rect key="frame" x="20" y="360" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ENe-Dv-ebF"/>
+                                    <constraint firstAttribute="width" constant="100" id="JMv-ne-VS9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="9UE-14-JsA"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqY-pF-BEm">
+                                <rect key="frame" x="391" y="20" width="69" height="30"/>
+                                <color key="backgroundColor" red="0.24598726630000001" green="0.65305614469999995" blue="0.99653393030000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="FEP-4e-zko"/>
+                                    <constraint firstAttribute="height" constant="30" id="yZ9-wy-9gE"/>
+                                </constraints>
+                                <state key="normal" title="Redraw">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="redrawButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QB4-pg-34a"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSk-cf-oP8">
+                                <rect key="frame" x="20" y="321" width="51" height="31"/>
+                                <connections>
+                                    <action selector="sourceSwitchChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Uaa-Jy-iOs"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTB-6j-6nb">
+                                <rect key="frame" x="77" y="321" width="149" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="82O-Hk-Eja"/>
+                                    <constraint firstAttribute="width" constant="149" id="ITv-cA-dxc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ADy-Bc-ZAB" firstAttribute="top" secondItem="aTB-6j-6nb" secondAttribute="bottom" constant="8" id="4Vj-vP-z38"/>
+                            <constraint firstItem="f7u-na-LGR" firstAttribute="top" secondItem="NSd-W7-1lf" secondAttribute="bottom" constant="8" id="91B-je-i8r"/>
+                            <constraint firstItem="gqY-pF-BEm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9G9-13-LlK"/>
+                            <constraint firstItem="YSk-cf-oP8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="GBE-wc-aiK"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ADy-Bc-ZAB" secondAttribute="bottom" constant="20" id="Ghy-4s-fO2"/>
+                            <constraint firstItem="ADy-Bc-ZAB" firstAttribute="top" secondItem="YSk-cf-oP8" secondAttribute="bottom" constant="8" id="PJF-iT-kQS"/>
+                            <constraint firstItem="aTB-6j-6nb" firstAttribute="leading" secondItem="YSk-cf-oP8" secondAttribute="trailing" constant="8" id="aXg-yZ-cXj"/>
+                            <constraint firstAttribute="trailing" secondItem="NSd-W7-1lf" secondAttribute="trailing" constant="20" id="e7c-h5-Atr"/>
+                            <constraint firstAttribute="trailing" secondItem="gqY-pF-BEm" secondAttribute="trailing" constant="20" id="ltC-Vv-ISz"/>
+                            <constraint firstAttribute="trailing" secondItem="f7u-na-LGR" secondAttribute="trailing" constant="20" id="nI8-BS-yAo"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="f7u-na-LGR" secondAttribute="bottom" constant="20.5" id="nkt-Ec-GQx"/>
+                            <constraint firstItem="ADy-Bc-ZAB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="zjz-JX-CSR"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="f7u-na-LGR" id="8c3-sC-tAn"/>
+                        <outlet property="redrawButton" destination="gqY-pF-BEm" id="tXw-4V-zAP"/>
+                        <outlet property="slider" destination="NSd-W7-1lf" id="Q8i-sm-Gzz"/>
+                        <outlet property="sourceLabel" destination="aTB-6j-6nb" id="OYg-Am-nch"/>
+                        <outlet property="sourceSwitch" destination="YSk-cf-oP8" id="f4V-BM-fXe"/>
+                        <outlet property="touchView" destination="ADy-Bc-ZAB" id="e0m-OW-zY7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
