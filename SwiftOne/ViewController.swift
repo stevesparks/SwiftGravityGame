@@ -67,8 +67,8 @@ class ViewController: UIViewController, AVTouchViewDelegate {
 	}
 
 	func gravityUpdated(motion: CMDeviceMotion!, error: NSError!) {
-		var x = CGFloat(motion!.gravity.x) * 50.0
-		var y = CGFloat(motion!.gravity.y) * -50.0
+		var x = CGFloat(motion.gravity.x) * 50.0
+		var y = CGFloat(motion.gravity.y) * -50.0
 		var p = CGPointMake(x,y)
 
 		// Have to correct for orientation.
