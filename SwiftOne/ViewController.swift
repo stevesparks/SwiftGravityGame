@@ -9,7 +9,7 @@
 import UIKit
 import CoreMotion
 
-class ViewController: UIViewController, AVTouchViewDelegate {
+class ViewController: UIViewController {
 
 	// all the stuff in the storyboard
 	@IBOutlet var slider : UISlider
@@ -324,11 +324,6 @@ class ViewController: UIViewController, AVTouchViewDelegate {
 		gravity.gravityDirection = v;
 	}
 
-	func touchViewDidChange(touchView: AVTouchView!) {
-		var p = touchView.offsetFromCenter;
-		var v = CGVectorMake(0 - (p.x / 50),0 - (p.y / 50));
-		gravity.gravityDirection = v;
-	}
 }
 
 

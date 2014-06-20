@@ -13,7 +13,6 @@
 		0E34020A1943F443001F8E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E3402081943F443001F8E61 /* Main.storyboard */; };
 		0E34020C1943F443001F8E61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E34020B1943F443001F8E61 /* Images.xcassets */; };
 		0E3402181943F443001F8E61 /* SwiftOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3402171943F443001F8E61 /* SwiftOneTests.swift */; };
-		0E95E58A19465B8C00056938 /* AVTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95E58919465B8C00056938 /* AVTouchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +37,6 @@
 		0E3402161943F443001F8E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E3402171943F443001F8E61 /* SwiftOneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOneTests.swift; sourceTree = "<group>"; };
 		0E95E58719465B8B00056938 /* SwiftOne-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftOne-Bridging-Header.h"; sourceTree = "<group>"; };
-		0E95E58819465B8C00056938 /* AVTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTouchView.h; sourceTree = "<group>"; };
-		0E95E58919465B8C00056938 /* AVTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTouchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +89,6 @@
 				0E3402041943F443001F8E61 /* AppDelegate.swift */,
 				0E3402061943F443001F8E61 /* ViewController.swift */,
 				0E3402081943F443001F8E61 /* Main.storyboard */,
-				0E95E58819465B8C00056938 /* AVTouchView.h */,
-				0E95E58919465B8C00056938 /* AVTouchView.m */,
 				0E0450C91947A30C00B7C39F /* TouchView.swift */,
 				0E34020B1943F443001F8E61 /* Images.xcassets */,
 				0E3402021943F443001F8E61 /* Supporting Files */,
@@ -228,7 +223,6 @@
 			files = (
 				0E0450CA1947A30C00B7C39F /* TouchView.swift in Sources */,
 				0E3402071943F443001F8E61 /* ViewController.swift in Sources */,
-				0E95E58A19465B8C00056938 /* AVTouchView.m in Sources */,
 				0E3402051943F443001F8E61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
