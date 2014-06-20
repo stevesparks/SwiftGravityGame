@@ -12,7 +12,7 @@ import QuartzCore
 class TouchView : UIView {
 	var lastTouchedPoint = CGPointMake(0,0)
 	var dot = CAShapeLayer()
-	let circleRadius = 10.0
+	let circleRadius : CGFloat = 10.0
 
 	var delegate : ViewController?
 
@@ -24,9 +24,10 @@ class TouchView : UIView {
 		self.layer.borderWidth = 1.0
 		self.clipsToBounds = true
 
-		let dia = circleRadius + circleRadius
+		let dia = CGFloat(circleRadius + circleRadius)
+		let rect : CGRect = CGRectMake(0, 0, dia, dia);
 
-		dot.path = UIBezierPath(roundedRect:CGRectMake(0, 0, dia, dia), cornerRadius:circleRadius).CGPath
+		dot.path = UIBezierPath(roundedRect:rect, cornerRadius:circleRadius).CGPath
 
 		var blue = UIColor.blueColor().CGColor
 
