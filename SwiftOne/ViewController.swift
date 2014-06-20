@@ -109,6 +109,11 @@ class ViewController: UIViewController, AVTouchViewDelegate {
 		animator?.addBehavior(boxBehavior)
 
 		gravity.gravityDirection = CGVectorMake(0, 0.8)
+
+		var newY = CGRectGetMidY(touchView.bounds) * 0.9;
+		var offset = CGPointMake(CGRectGetMidX(touchView.bounds), newY)
+		touchView.setOffsetFromCenter(offset)
+
 		animator?.addBehavior(gravity);
 	}
 
