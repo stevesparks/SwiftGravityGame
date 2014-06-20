@@ -37,7 +37,7 @@
                                     <action selector="elasticitySliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cLZ-cl-nEZ"/>
                                 </connections>
                             </slider>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADy-Bc-ZAB" customClass="AVTouchView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADy-Bc-ZAB" customClass="TouchView" customModule="SwiftOne" customModuleProvider="target">
                                 <rect key="frame" x="20" y="360" width="100" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>

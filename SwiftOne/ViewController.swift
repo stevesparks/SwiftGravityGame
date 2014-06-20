@@ -14,7 +14,7 @@ class ViewController: UIViewController, AVTouchViewDelegate {
 	// all the stuff in the storyboard
 	@IBOutlet var slider : UISlider
 	@IBOutlet var label : UILabel
-	@IBOutlet var touchView : AVTouchView
+	@IBOutlet var touchView : TouchView
 	@IBOutlet var sourceSwitch : UISwitch
 	@IBOutlet var sourceLabel : UILabel
 	@IBOutlet var redrawButton : UIButton
@@ -316,6 +316,12 @@ class ViewController: UIViewController, AVTouchViewDelegate {
 	@IBAction func elasticitySliderChanged(sender : UISlider) {
 		boxBehavior.elasticity = CGFloat(sender.value)
 		label.text = "elasticity = \(sender.value)"
+	}
+
+	func touchViewDidChange(touchView: TouchView!) {
+		var p = touchView.offsetFromCenter();
+		var v = CGVectorMake(0 - (p.x / 50),0 - (p.y / 50));
+		gravity.gravityDirection = v;
 	}
 
 	func touchViewDidChange(touchView: AVTouchView!) {
