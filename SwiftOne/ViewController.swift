@@ -110,8 +110,8 @@ class ViewController: UIViewController {
 
 		gravity.gravityDirection = CGVectorMake(0, 0.8)
 
-		var newY = CGRectGetMidY(touchView.bounds) * 0.9;
-		var offset = CGPointMake(CGRectGetMidX(touchView.bounds), newY)
+		var newY = CGRectGetMidY(touchView.bounds) * 0.4;
+		var offset = CGPointMake(0, newY)
 		touchView.setOffsetFromCenter(offset)
 
 		animator?.addBehavior(gravity);
