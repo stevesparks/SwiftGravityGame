@@ -28,10 +28,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1.3" translatesAutoresizingMaskIntoConstraints="NO" id="NSd-W7-1lf">
-                                <rect key="frame" x="278" y="401" width="184" height="31"/>
+                                <rect key="frame" x="126" y="401" width="336" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HTP-XD-5ex"/>
-                                    <constraint firstAttribute="width" constant="180" id="mEI-YZ-tm3"/>
                                 </constraints>
                                 <connections>
                                     <action selector="elasticitySliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cLZ-cl-nEZ"/>
@@ -91,6 +90,7 @@
                             <constraint firstItem="aTB-6j-6nb" firstAttribute="leading" secondItem="YSk-cf-oP8" secondAttribute="trailing" constant="8" id="aXg-yZ-cXj"/>
                             <constraint firstAttribute="trailing" secondItem="NSd-W7-1lf" secondAttribute="trailing" constant="20" id="e7c-h5-Atr"/>
                             <constraint firstAttribute="trailing" secondItem="gqY-pF-BEm" secondAttribute="trailing" constant="20" id="ltC-Vv-ISz"/>
+                            <constraint firstItem="NSd-W7-1lf" firstAttribute="leading" secondItem="ADy-Bc-ZAB" secondAttribute="trailing" constant="8" id="nEd-Q4-CJ5"/>
                             <constraint firstAttribute="trailing" secondItem="f7u-na-LGR" secondAttribute="trailing" constant="20" id="nI8-BS-yAo"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="f7u-na-LGR" secondAttribute="bottom" constant="20.5" id="nkt-Ec-GQx"/>
                             <constraint firstItem="ADy-Bc-ZAB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="zjz-JX-CSR"/>

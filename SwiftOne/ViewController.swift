@@ -23,6 +23,8 @@ class ViewController: UIViewController {
 	let rockSize : CGFloat = 10.0;
 	let boxSize : CGFloat = 20.0;
 
+	let numberFormat = NSNumberFormatter();
+
 	var rocks : Array<UIView> = []
 	var boxes : UIView[] = []
 
@@ -113,6 +115,9 @@ class ViewController: UIViewController {
 		var newY = CGRectGetMidY(touchView.bounds) * 0.4;
 		var offset = CGPointMake(0, newY)
 		touchView.setOffsetFromCenter(offset)
+
+		numberFormat.maximumFractionDigits = 3;
+		numberFormat.minimumFractionDigits = 3;
 
 		animator?.addBehavior(gravity);
 	}
@@ -315,7 +320,9 @@ class ViewController: UIViewController {
 
 	@IBAction func elasticitySliderChanged(sender : UISlider) {
 		boxBehavior.elasticity = CGFloat(sender.value)
-		label.text = "elasticity = \(sender.value)"
+		var elas = boxBehavior.elasticity;
+		var lilVal = numberFormat.stringFromNumber(elas);
+		label.text = "elasticity = \(lilVal)"
 	}
 
 	func touchViewDidChange(touchView: TouchView!) {
