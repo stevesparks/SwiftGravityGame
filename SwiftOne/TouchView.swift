@@ -11,10 +11,10 @@ import QuartzCore
 
 class TouchView : UIView {
 	var lastTouchedPoint = CGPointMake(0,0)
-	var dot = CAShapeLayer()
-	let circleRadius : CGFloat = 10.0
-
 	var delegate : ViewController?
+
+	let dot = CAShapeLayer()
+	let circleRadius : CGFloat = 10.0
 
 	override func didMoveToSuperview()  {
 		super.didMoveToSuperview();
@@ -29,7 +29,7 @@ class TouchView : UIView {
 
 		dot.path = UIBezierPath(roundedRect:rect, cornerRadius:circleRadius).CGPath
 
-		var blue = UIColor.blueColor().CGColor
+		let blue = UIColor.blueColor().CGColor
 
 		dot.fillColor = blue;
 		dot.strokeColor = blue;
@@ -38,7 +38,7 @@ class TouchView : UIView {
 	}
 
 	func moveDotToTouch(touch: UITouch) {
-		var p = touch.locationInView(self);
+		let p = touch.locationInView(self);
 		if CGRectContainsPoint(self.bounds, p) {
 			self.moveDotToPoint(p)
 		}
@@ -48,8 +48,8 @@ class TouchView : UIView {
 		lastTouchedPoint = p;
 
 		// center it
-		var newX = p.x - circleRadius;
-		var newY = p.y - circleRadius;
+		let newX = p.x - circleRadius;
+		let newY = p.y - circleRadius;
 
 		dot.position = CGPointMake(newX, newY)
 		dot.speed = 1000
@@ -60,14 +60,14 @@ class TouchView : UIView {
 	}
 
 	func offsetFromCenter() -> CGPoint {
-		var center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-		var ret = CGPointMake(center.x - lastTouchedPoint.x, center.y - lastTouchedPoint.y);
+		let center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+		let ret = CGPointMake(center.x - lastTouchedPoint.x, center.y - lastTouchedPoint.y);
 
 		return ret;
 	}
 
 	func setOffsetFromCenter(offset: CGPoint) {
-		var point = CGPointMake(CGRectGetMidX(self.bounds)+offset.x, CGRectGetMidY(self.bounds)+offset.y);
+		let point = CGPointMake(CGRectGetMidX(self.bounds)+offset.x, CGRectGetMidY(self.bounds)+offset.y);
 		moveDotToPoint(point)
 	}
 
@@ -77,7 +77,7 @@ class TouchView : UIView {
 	override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)  {
 		super.touchesBegan(touches, withEvent: event)
 		if touches {
-			var touch : UITouch = touches.anyObject() as UITouch
+			let touch : UITouch = touches.anyObject() as UITouch
 			self.moveDotToTouch(touch)
 		}
 	}
@@ -85,7 +85,7 @@ class TouchView : UIView {
 	override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
 		super.touchesMoved(touches, withEvent: event)
 		if touches {
-			var touch : UITouch = touches.anyObject() as UITouch
+			let touch : UITouch = touches.anyObject() as UITouch
 			self.moveDotToTouch(touch)
 		}
 	}
@@ -93,7 +93,7 @@ class TouchView : UIView {
 	override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!)  {
 		super.touchesEnded(touches, withEvent: event)
 		if touches {
-			var touch : UITouch = touches.anyObject() as UITouch
+			let touch : UITouch = touches.anyObject() as UITouch
 			self.moveDotToTouch(touch)
 		}
 	}
